@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Initial conf  */
-@import url("./css/fonts.css");
+@import url(./fonts.css);
+@import url(./media.css);
 html {
   scroll-behavior: smooth;
 }
@@ -121,7 +122,7 @@ button {
 /* Header section */
 /* Hero section */
 .hero {
-  height: 100vh;
+  height: calc(100vh - 70px);
   background: url("../images/hero.jpg") no-repeat center/cover;
   padding: 200px 0 0 30px;
 }
