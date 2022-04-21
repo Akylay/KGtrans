@@ -1,0 +1,9 @@
+@media (max-width: 767.98px) {
+  .header__nav {
+    display: none;
+  }
+  .header__btn {
+    font-size: 14px;
+    width: 150px;
+  }
+}
