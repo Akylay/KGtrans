@@ -72,9 +72,11 @@ button {
   height: 15px;
   border-radius: 50%;
   background: lighten(#c4c4c4, 20%);
+  border: 1px solid gray;
+  box-shadow: 0 0 15px #000;
 
-  &.active {
-    background: lighten(#c4c4c4, 10%);
+  &.dot-active {
+    background: darken(#c4c4c4, 15%);
   }
 }
 
@@ -189,16 +191,17 @@ button {
 /* about section */
 
 .about {
+  padding: 10px;
 
   & .container {
-    padding: 10px 10px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 3px 4px 15px #000;
   }
 
   &__info {
-    // background: #FFE000;
-    // background: -webkit-linear-gradient(to left, #799F0C, #FFE000);
-    // background: linear-gradient(to left, #799F0C, #FFE000);
-    // background-attachment: fixed;
+    text-align: center;
     padding: 1px;
   }
 
@@ -208,16 +211,54 @@ button {
     margin: 0 auto 10px;
   }
 
-  &__text,
-  &__title {
-    background: rgb(223, 223, 223);
-    border: 1px solid gray;
-    border-radius: 15px;
-    padding: 10px;
-  }
-
   &__text {
     max-width: 400px;
+    margin: 0 auto;
+  }
+  &__card {
+    max-width: 250px;
+    width: 100%;
+    box-shadow: 0 4px 10px #575740;
+    background: #d6d6d6;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: background .3s ease-in-out;
+    &:hover {
+      background: lighten(#d6d6d6, 5%);
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 20px;
+    max-width: 550px;
+    width: 100%;
+    margin: 20px auto 0;
+  }
+}
+
+.scooter__img {
+  position: relative;
+  animation: scooter-track;
+  animation-duration: 10s;
+  transition: all .3s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes scooter-track {
+  0%{
+    left: 0;
+    top: -10px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: -10px;
+    left: 95%;
   }
 }
 
