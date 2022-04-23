@@ -14,6 +14,7 @@
     <div class="dots">
         <a class="dot" href="#hero"></a>
         <a class="dot" href="#about"></a>
+
         <!-- <a class="dot" href="#"></a> -->
     </div>
     <header class="header fixed">
@@ -24,22 +25,27 @@
                 <a href="#" class="header__link">Как пользоваться</a>
                 <a href="#" class="header__link">Тарифы</a>
             </nav>
-            <button class="header__btn"> Скачать приложение</button>
+            <button class="section__btn"> Скачать приложение</button>
         </div>
     </header>
     <section class="hero hero__gradient" id="hero">
         <div class="container">
             <h1 class="hero__title">Привет! Мы — KGtrans, прокат электросамокатов и велосипедов</h1>
             <p class="hero__desc">Наша цель — сделать передвижение по городу радостным и комфортным для всех</p>
+            <a href="#advantages">
+                <button class="section__btn hero__btn">Преимущество проката
+                    <img class="hero__btn_arrow" src="./images/arrow.png">
+                </button>
+            </a>
         </div>
     </section>
     <section class="about" id="about">
         <div class="container">
             <div class="about__info">
-                <h1 class="section__title about__title">
+                <h1 class="section__title ">
                     О нашей компании
                 </h1>
-                <p class="section__text about__text">
+                <p class="section__desc ">
                     Наша компания несколько лет предоставляют свои товары в Кыргызстане,
                     и мы планируем распространить наши товары по всему Кыргызстану для более удобного передвижения.
                     KGtrans - не просто электросамокаты, а самые комфортные и бестрые электросамокаты.
@@ -91,7 +97,77 @@
             </div>
         </div>
     </section>
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <h2 class="section__title">Новый взгляд на прокат микротранспорта</h2>
+            <p class="section__desc">Комплекс проката KGtrans включает в себя уникальные станции автоматического
+                заряда и удержания микроэлектротранспорта. Катайтесь по всему городу и оставляйте самокат
+                на удобной для Вас станции.</p>
+            <div class="scooter__info d-flex justify-between">
+                <div class="advantages__img">
+                    <img src="./images/scooter.advan.png">
+                </div>
+                <div class="advantages__cards ">
+                    <div class="d-flex">
+                        <div class="advantages__cards_icon1">
+                           <img  src="./images/charger-6985466.png">
+                        </div>
+                        <div class="advantages__cards_info">
+                            <h5 class="advantages__cards_title">Автоматическая зарядка</h5>
+                            <p class="advantages__cards_desc">станция автоматически заряжает
+                                и удерживает элетротранспорт</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="advantages__cards_icon2">
+                            <img  src="./images/mobile-app-1399763.png">
+                        </div>
+                        <div class="advantages__cards_info">
+                            <h5 class="advantages__cards_title">Удобное приложение</h5>
+                            <p class="advantages__cards_desc">позволяет выбрать удобную станцию
+                                и осуществить прокат</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="advantages__cards_icon3">
+                            <img src="./images/24-hours-899098.png">
+                        </div>
+                        <div class="advantages__cards_info">
+                            <h5 class="advantages__cards_title">24/7</h5>
+                            <p class="advantages__cards_desc">круглосуточная работа системы дает возможность
+                                кататься в любое удобное Вам время</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="advantages__icon_scooter" src="./images/icon-scooter-3995181.png">
+    </section>
     <script src="./js/main.js"></script>
+    <br>
+    <br>
+<!--<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>-->
 </body>
 
 </html>
