@@ -1,12 +1,50 @@
+@media (max-width: 997.98px) {
+	.advantages {
+		& .container {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+}
+
+@media (max-width: 787.98px) {
+	.about__cards {
+		grid-template-columns: 1fr;
+	}
+	.about__card:hover {
+		transform: translateY(10px);
+	}
+}
+
 @media (max-width: 767.98px) {
 	.header {
 		&__nav {
 			display: none;
 		}
+
 		&__btn {
 			font-size: 14px;
 			width: 150px;
-			
 		}
-	}	
+	}
+	.hero {
+		&__title {
+			font-size: 30px;
+		}
+		&__desc {
+			font-size: 16px;
+		}
+		&__btn {
+			margin-top: 40px;
+		}
+	}
+
+}
+
+@media (max-width: 599.98px) {
+	.use__slider {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
 }

@@ -1,21 +1,38 @@
+const sliderImage = document.querySelectorAll(".use__slider-image"),
+	sliderInfo = document.querySelectorAll(".use__info"),
+	slidesStep = document.querySelectorAll(".use__slider-dot");
+let slideIndex = 1
+let timer = setInterval(()=>{plusSlides(1)},3000)
+showSlides(slideIndex);
 
-
-function scrolTo(link, toLink, className, toClassName) {
-	document.addEventListener("scroll", function () {
-		const thisClass = document.querySelector(`${className}`)
-		const posTop = thisClass.getBoundingClientRect().top
-		const posBottom = thisClass.getBoundingClientRect().bottom
-		const thisDot = document.querySelector(`[href="${link}"]`)
-		const toDot = document.querySelector(`[href="${toLink}"]`)
-		console.log("pb:" + posBottom, "pt:" + posTop )
-		if (posBottom <= 80) {
-			thisDot.classList.remove("dot-active")
-			toDot.classList.add("dot-active")
-		} else if (posBottom < 320) {
-			thisDot.classList.add("dot-active")
-			toDot.classList.remove("dot-active")
-
-		}
-	})
+function plusSlides(n) {
+	showSlides(slideIndex += n);
 }
-scrolTo("#hero", "#about", ".hero")
+
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+
+	if (n > sliderImage.length) {
+		slideIndex = 1
+		for (let j = 0; j < sliderImage.length; j++) {
+			slidesStep[j].classList.remove("active")
+		}
+	}
+	if (n < 1) {
+		slideIndex = sliderImage.length
+	}
+
+	for (let i = 0; i < sliderImage.length; i++) {
+		sliderImage[i].classList.remove("active");
+		sliderInfo[i].classList.remove("active");
+	}
+
+	for (let j = 0; j < slideIndex; j++) {
+		slidesStep[j].classList.add("active")
+	}
+	sliderImage[slideIndex - 1].classList.add("active");
+	sliderInfo[slideIndex - 1].classList.add("active");
+}

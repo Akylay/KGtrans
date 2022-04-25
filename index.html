@@ -7,23 +7,19 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
-    <div class="dots">
-        <a class="dot" href="#hero"></a>
-        <a class="dot" href="#about"></a>
-
-        <!-- <a class="dot" href="#"></a> -->
-    </div>
     <header class="header fixed">
         <div class="container d-flex align-center justify-between">
             <img class="header__logo" src="./images/2_Flat_logo_on_transparent_113x72.png">
             <nav class="header__nav">
-                <a href="#" class="header__link">Главная</a>
-                <a href="#" class="header__link">Как пользоваться</a>
-                <a href="#" class="header__link">Тарифы</a>
+                <a href="#hero" class="header__link">Главная</a>
+                <a href="#use" class="header__link">Как пользоваться</a>
+                <a href="#tarrif" class="header__link">Тарифы</a>
             </nav>
             <button class="section__btn"> Скачать приложение</button>
         </div>
@@ -110,7 +106,7 @@
                 <div class="advantages__cards ">
                     <div class="d-flex">
                         <div class="advantages__cards_icon1">
-                           <img  src="./images/charger-6985466.png">
+                            <img src="./images/charger-6985466.png">
                         </div>
                         <div class="advantages__cards_info">
                             <h5 class="advantages__cards_title">Автоматическая зарядка</h5>
@@ -120,7 +116,7 @@
                     </div>
                     <div class="d-flex">
                         <div class="advantages__cards_icon2">
-                            <img  src="./images/mobile-app-1399763.png">
+                            <img src="./images/mobile-app-1399763.png">
                         </div>
                         <div class="advantages__cards_info">
                             <h5 class="advantages__cards_title">Удобное приложение</h5>
@@ -143,31 +139,79 @@
         </div>
         <img class="advantages__icon_scooter" src="./images/icon-scooter-3995181.png">
     </section>
+    <section class="use" id="use">
+        <div class="container">
+            <h2 class="section__title">
+                Как пользоваться нашими электросамокатами
+            </h2>
+            <p class="section__desc">
+                Наши самокаты очень просты в пользовании,
+                у нас есть самокаты как для детей, так для
+                подростков и взрослых
+            </p>
+            <div class="use__slider">
+                <div class="use__slider-img">
+                    <img class="use__slider-image active" src="./images/usage_screen1.png" alt="">
+                    <img class="use__slider-image" src="./images/usage_screen2.png" alt="">
+                    <img class="use__slider-image" src="./images/usage_screen3.png" alt="">
+                    <img class="use__slider-image" src="./images/usage_screen3.png" alt="">
+                </div>
+                <div class="use__slider-text">
+                    <div class="use__info active">
+                        <p class="use__info-text">
+                            Скачать бесплатное
+                            мобильное приложение
+                            KGtrans
+                        </p>
+                        <p class="use__info-suptext">
+                            Приложение доступно
+                            для iOS и Android
+                        </p>
+                    </div>
+                    <div class="use__info">
+                        <p class="use__info-text">
+                            Пройти быструю
+                            регистрацию
+                        </p>
+                        <p class="use__info-suptext">
+                            Для регистрации Вам понадобится
+                            документ, удостоверяющий личность
+                            (паспорт или водительское
+                            удостоверение)
+                        </p>
+                    </div>
+                    <div class="use__info">
+                        <p class="use__info-text">
+                            Найти ближайшую
+                            станцию проката
+                        </p>
+                        <p class="use__info-suptext">
+                            Все доступные самокаты
+                            отображаются на интерактивной
+                            карте онлайн в приложении
+                        </p>
+                    </div>
+                    <div class="use__info">
+                        <p class="use__info-text">
+                            Наслаждайтесь
+                            прогулкой
+                        </p>
+                        <p class="use__info-suptext">
+                            можно отстыковать самокат
+                            и кататься без ограничения времени
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="use__slider-dots">
+                <div class="use__slider-dot active">1</div>
+                <div class="use__slider-dot">2</div>
+                <div class="use__slider-dot">3</div>
+                <div class="use__slider-dot">4</div>
+            </div>
+        </div>
+    </section>
     <script src="./js/main.js"></script>
-    <br>
-    <br>
-<!--<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>-->
 </body>
 
 </html>
