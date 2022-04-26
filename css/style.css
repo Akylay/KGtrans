@@ -350,14 +350,6 @@ button {
   line-height: 20px;
   color: #000000;
 }
-.advantages__icon_scooter {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  bottom: -45px;
-  right: 280px;
-}
-
 .scooter__info {
   max-width: 830px;
   margin: 0 auto;
@@ -365,6 +357,12 @@ button {
 
 /*! advantages */
 /*! use */
+.use .container{
+  padding: 50px 290px;
+  background: #fdfff9;
+  border-radius: 6px;
+  box-shadow: 3px 4px 15px #000
+}
 .use__slider {
   position: relative;
   overflow: hidden;
@@ -372,7 +370,7 @@ button {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 290px;
+
 }
 .use__slider-image {
   display: none;
@@ -431,10 +429,6 @@ button {
   background: #7a9015 ;
   z-index: 5;
 }
-.use__slider-dots{
-  padding: 0 290px;
-
-}
 .use__slider-dot{
   position: relative;
   width: 50px;
@@ -465,14 +459,34 @@ button {
 }
 
 .use__dots_info{
-  padding: 50px 222px 0 222px;
+  margin-top: 50px;
 }
 .use__dots_info-text{
-  width: 200px;
+  width: 110px;
   text-align: center;
 }
 .use__dots_info-text:not(:last-child){
-  margin-right: 68px;
+  margin-right: 160px;
 }
-
 /*! use */
+
+
+/* Station section */
+.station{
+  padding:  10px;
+}
+.station .container {
+  background: #fdfff9;
+  border-radius: 6px;
+  box-shadow: 3px 4px 15px #000;
+  padding: 50px 0;
+}
+.map{
+  width: 900px;
+  height: 550px;
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+  box-shadow: 4px 6px 20px 0px rgb(0 0 0 / 20%);
+}
+/* Station section */

@@ -36,3 +36,6 @@ function showSlides(n) {
 	sliderImage[slideIndex - 1].classList.add("active");
 	sliderInfo[slideIndex - 1].classList.add("active");
 }
+
+
+
