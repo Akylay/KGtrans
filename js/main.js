@@ -1,8 +1,9 @@
+
 const sliderImage = document.querySelectorAll(".use__slider-image"),
 	sliderInfo = document.querySelectorAll(".use__info"),
 	slidesStep = document.querySelectorAll(".use__slider-dot");
 let slideIndex = 1
-let timer = setInterval(()=>{plusSlides(1)},3000)
+let timer = setInterval(()=>{plusSlides(1)},1500)
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -36,6 +37,3 @@ function showSlides(n) {
 	sliderImage[slideIndex - 1].classList.add("active");
 	sliderInfo[slideIndex - 1].classList.add("active");
 }
-
-
-
