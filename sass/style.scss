@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Initial conf  */
 @import url(./fonts.css);
 @import url(./media.css);
@@ -31,7 +32,6 @@ button {
 }
 
 /* Initial conf  */
-
 /* General elements */
 .container {
   max-width: 1460px;
@@ -65,15 +65,48 @@ button {
   font-weight: 500;
   color: #fff;
   cursor: pointer;
-  transition: background .3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
 
-  &:hover {
-    background: lighten(#7a9015, 5%);
-  }
+.section__btn:hover {
+  background: #8da618;
 }
 
 /* General elements */
+/*общие стили для section*/
+.section__title {
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  line-height: 115%;
+  color: #394504;
+}
 
+.section__desc {
+  max-width: 720px;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.about,
+.advantages,
+.use {
+  padding: 10px;
+}
+
+.section-card {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #fdfff9;
+  border-radius: 6px;
+  box-shadow: 3px 4px 15px #000;
+}
+
+/*общие стили для section*/
 /* Header section */
 .header {
   height: 75px;
@@ -99,13 +132,13 @@ button {
     margin: 0 auto;
     position: fixed;
     background: #d7decb;
-    box-shadow: 0px 1px 8px rgb(0 0 0 / 10%);
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
     z-index: 9999;
   }
 }
 
-/* Header section */
 
+/* Header section */
 /* Hero section */
 .hero {
   height: calc(100vh - 70px);
@@ -122,16 +155,16 @@ button {
     font-size: 21px;
     font-weight: 500;
     border: 2px solid #57612a;
-    transition: .3s;
-
-    &:hover {
-      background: #cbcbb3;
-    }
+    transition: 0.3s;
 
     &_arrow {
       width: 15px;
       height: 15px;
       margin: -1px;
+    }
+
+    &:hover {
+      background: #cbcbb3;
     }
   }
 
@@ -142,7 +175,7 @@ button {
     font-size: 44px;
     line-height: 115%;
     width: 600px;
-    margin-top: 75px
+    margin-top: 75px;
   }
 
   &__desc {
@@ -153,7 +186,6 @@ button {
     color: #FFFFFF;
     max-width: 440px;
     margin-top: 35px;
-
   }
 
   &__gradient {
@@ -169,54 +201,14 @@ button {
       height: 100%;
       background: linear-gradient(164deg, rgba(167, 228, 228, 0) -189.42%, rgba(21, 56, 56, 0.84) 224%);
     }
-
   }
 }
 
 /* Hero section */
 
-/*общие стили для section*/
-
-.section__title {
-  font-weight: 700;
-  font-size: 30px;
-  text-align: center;
-  line-height: 115%;
-  color: #394504;
-}
-
-.section__desc {
-  max-width: 720px;
-  margin: 20px auto;
-  text-align: center;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  color: #000000;
-}
-
-.about,
-.advantages,
-.use {
-  padding: 10px;
-
-  & .container {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: #fdfff9;
-    border-radius: 6px;
-    box-shadow: 3px 4px 15px #000;
-  }
-}
-
-/*общие стили для section*/
-
 /* about section */
-
 .about {
   & .container {
-    background: #fdfff9;
-    border-radius: 6px;
     box-shadow: 3px 4px 15px #000;
   }
 
@@ -247,12 +239,7 @@ button {
     border-radius: 10px;
     padding: 0 40px;
     text-align: center;
-    transition: all .3s ease-in-out;
-
-    &:hover {
-      background: #f2f5e7;
-      transform: scale(1.1);
-    }
+    transition: all 0.3s ease-in-out;
 
     &-title {
       font-weight: bold;
@@ -260,7 +247,11 @@ button {
       line-height: 20px;
       color: #394504;
       margin-bottom: 15px;
+    }
 
+    &:hover {
+      background: #f2f5e7;
+      transform: scale(1.1);
     }
   }
 
@@ -279,7 +270,7 @@ button {
   position: relative;
   animation: scooter-track;
   animation-duration: 10s;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -301,16 +292,11 @@ button {
 }
 
 /* about section */
-
 /*! advantages */
-
 .advantages {
   position: relative;
 
   & .container {
-    background: #fdfff9;
-    border-radius: 6px;
-    box-shadow: 3px 4px 15px #000;
     padding-left: 205px;
     padding-right: 205px;
   }
@@ -319,7 +305,7 @@ button {
     width: 264px;
     height: 400px;
 
-    & img {
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -327,7 +313,15 @@ button {
   }
 
   &__cards {
+
     width: 460px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin: 5px;
+    }
 
     &_icon1 {
       width: 54px;
@@ -342,13 +336,6 @@ button {
     &_icon3 {
       width: 76px;
       height: 47px;
-    }
-
-    & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      margin: 5px;
     }
 
     & .d-flex {
@@ -374,14 +361,6 @@ button {
       color: #000000;
     }
   }
-
-  &__icon_scooter {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    bottom: -45px;
-    right: 280px;
-  }
 }
 
 .scooter__info {
@@ -390,55 +369,173 @@ button {
 }
 
 /*! advantages */
-
 /*! use */
+.use {
+  & .container {
+    padding: 50px 290px;
+  }
 
+  &__slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
-.use__slider {
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  &-image {
-    display: none;
-    max-width: 200px;
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      max-width: 330px;
+      width: 100%;
+      height: 100px;
+      margin-top: 45px;
+    }
+
+    &-image {
+      display: none;
+      max-width: 350px;
+      margin-top: 35px;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &-dots {
+      max-width: 880px;
+      width: 100%;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    &-dot {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      background: #cbcbb3;
+      border-radius: 50px;
+      z-index: 5;
+
+      &.active {
+        color: #FFFFFF;
+        background: #7a9015;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 50px;
+        background: #cbcbb3;
+        bottom: -50px;
+        right: 25px;
+      }
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    right: 10px;
+    max-width: 320px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+
+    &-text {
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 20px;
+      color: #394504;
+      margin-bottom: 20px;
+    }
+
+    &-suptext {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+    }
 
     &.active {
-      display: block;
+      opacity: 1;
+      transform: translateY(-100%);
+    }
+
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 190px;
+    color: #96b60a;
+    position: relative;
+  }
+
+  &__dots_info {
+    margin-top: 50px;
+    max-width: 880px;
+    width: 100%;
+    justify-content: space-between;
+
+    &-text {
+      width: 110px;
+      text-align: center;
     }
   }
 }
 
-.use__slider-text {
+.dot__wrapper {
+  width: 110px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  position: relative;
-  max-width: 330px;
-  width: 100%;
-  height: 100px;
 }
 
-.use__info{
+.dot__progress {
+  background: #cbcbb3;
   position: absolute;
-  top: 100%;
-  opacity: 0;
-  right: 10px;
-  max-width: 320px;
-  width: 100%;
-  transition: all .3s ease-in-out;
-  &.active {
-    opacity: 1;
-    transform: translateY(-100%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  height: 1px;
+  width: calc(100% - 100px);
+}
+
+.progressive {
+  background: #2d3603;
+  width: 0;
+  height: 1px;
+  position: relative;
+  
+}
+@keyframes progress-bar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: calc(100% - 100px);
   }
 }
 
-.use__slider-dot {
-  &.active {
-    color: red;
-  }
-}
 
 /*! use */
+
+/* Station section */
+.station {
+  padding: 10px;
+}
+
+.map {
+  width: 900px;
+  height: 550px;
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+  box-shadow: 4px 6px 20px rgba(0, 0, 0, 20%);
+}
+
+/* Station section */

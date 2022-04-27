@@ -4,15 +4,18 @@
     padding-right: 10px;
   }
 }
+
 @media (max-width: 787.98px) {
   .about__cards {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
-
   .about__card:hover {
-    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
+
 @media (max-width: 767.98px) {
   .header__nav {
     display: none;
@@ -21,7 +24,6 @@
     font-size: 14px;
     width: 150px;
   }
-
   .hero__title {
     font-size: 30px;
   }
@@ -32,10 +34,16 @@
     margin-top: 40px;
   }
 }
+
 @media (max-width: 599.98px) {
   .use__slider {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
   }
 }
