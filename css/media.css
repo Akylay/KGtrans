@@ -1,8 +1,41 @@
+@media (max-width: 1285px) {
+  .use .container{
+    padding: 50px 260px;
+  }
+}
+@media (max-width: 1231px) {
+  .use .container{
+    padding: 50px 200px;
+  }
+}
+@media (max-width: 1154px) {
+  .use .container{
+    padding: 50px 170px;
+  }
+  .advantages__img{
+    width: 213px;
+    height: 40px;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 1108px) {
+  .advantages__img{
+    display: none;
+  }
+  .advantages__cards{
+    margin: 0 auto;
+  }
+}
 @media (max-width: 1079.98px) {
+  .use .container{
+    padding: 50px 163px;
+  }
   .use__slider-bottom {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 533px;
+    margin: 0 auto;
   }
   .dot__progress {
     display: none;
@@ -35,7 +68,21 @@
     width: unset;
   }
 }
-
+@media (max-width: 1036px) {
+  .use .container{
+    padding: 50px 120px;
+  }
+  .advantages.container{
+    margin: 0 110px;
+  }
+  .section__desc{
+    max-width: 830px;
+  }
+  .map{
+    max-width: 770px;
+    height: 500px;
+  }
+}
 @media (max-width: 997.98px) {
   .advantages .container {
     padding-left: 10px;
@@ -43,6 +90,23 @@
   }
 }
 
+@media (max-width: 954px) {
+  .use .container{
+    padding: 50px 75px;
+  }
+}
+@media (max-width: 859px) {
+  .use .container{
+    padding: 50px 36px;
+  }
+  .map{
+    max-width: 680px;
+    height: 430px;
+  }
+  .header__nav{
+    max-width: 415px;
+  }
+}
 @media (max-width: 787.98px) {
   .about__cards {
     -ms-grid-columns: 1fr;
@@ -51,6 +115,9 @@
   .about__card:hover {
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
+  }
+  .use__slider-image{
+    max-width: 300px;
   }
 }
 
@@ -71,11 +138,47 @@
   .hero__btn {
     margin-top: 40px;
   }
-}
+
 
 .section-card:parent {
   background: black;
 }
+@media (max-width: 731px) {
+  .use__slider-image{
+    max-width: 248px;
+    margin-top: 60px;
+  }
+  .map{
+    max-width: 600px;
+    height: 395px;
+  }
+}
+  
+@media (max-width: 637px) {
+  .use .container{
+    padding: 50px 13px;
+  }
+  .header__btn{
+    width: 180px;
+  }
+  .use__dots_info-text{
+  font-size: 14px
+  }
+  .use__info-suptext{
+  font-size: 13px
+  }
+  .use__info{
+    max-width: 275px;
+  }
+  .use__link{
+    font-size: 13px;
+    margin-left: 46px;
+  }
+}
+
+
+}
+
 
 @media (max-width: 599.98px) {
   .use__slider {
@@ -91,4 +194,14 @@
   .map iframe {
     height: 50vh;
   }
+  .use__slider-text{
+    margin-bottom: 67px;
+  }
+  .use__link{
+    font-size: 15px;
+  }
+  .use__info-suptext{
+    font-size: 14px;
+  }
+
 }
