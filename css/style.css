@@ -599,3 +599,114 @@ section:not(.hero) {
 }
 
 /* Station section */
+
+/* Footer */
+.footer{
+  position: relative;
+  background: #7a9015;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .container{
+  max-width: 600px;
+}
+.footer__logo{
+  position: absolute;
+  background: #d7decb;
+  width: 125px;
+  height: 117px;
+  border-radius: 100%;
+  top: -50px;
+  left: 46.3%;
+}
+.footer__contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 95px;
+}
+.footer a{
+  color:#e2e2e2;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  transition: .6s;
+}
+.footer a:hover{
+  color: #FFFFFF;
+  font-size: 18px;
+}
+.footer__icons {
+  margin: 30px auto 10px;
+  width: 200px;
+}
+.fa-brands{
+  display: inline-block;
+  font-size: 25px;
+  animation: float 5s ease-in-out infinite;
+}
+.fa-instagram{
+  animation-delay: 1s;
+  color: #801aa8;
+}
+.fa-twitter{
+  animation-delay: 2s;
+  color: #1a89b4;
+}
+.fa-youtube{
+  animation-delay: 3s;
+  color: #e01b1b;
+}
+@keyframes float {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-15px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.footer__btn{
+  width: 222px;
+  height: 50px;
+  background: #454939;
+  border-radius: 9px;
+  border: #bbe817 1px solid;
+  color:#e2e2e2;
+  font-weight: 400;
+  font-size: 15px;
+  transition: .6s;
+}
+.footer__btn:not(:last-child){
+  margin-right: 20px;
+}
+.footer__btn:hover{
+  color: #000000;
+  background: #eafcdc;
+}
+.footer__address{
+  text-align: center;
+  color: #e2e2e2;
+  font-size: 14px;
+  margin: 20px 0 10px;
+}
+/* Footer */
+
+
+.header__btn{
+  border-color: #9bc50c;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #9bc50c inset, 0 0 0 0 #bbe817;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.header__btn:hover, .header__btn:focus {
+  color: #fff;
+  outline: 0;
+  box-shadow: 0 0 10px 0 #d2f5ab inset, 0 0 10px 4px #9bc50c;
+}
