@@ -101,6 +101,21 @@ button {
   background: #8da618;
 }
 
+.mask {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 101;
+}
+.mask.active {
+  display: block;
+}
+
 /* General elements */
 /*общие стили для section*/
 .section__title {
@@ -167,7 +182,7 @@ section:not(.hero) {
   background: #d7decb;
   -webkit-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
+  z-index: 100;
 }
 
 /* Header section */
@@ -781,6 +796,13 @@ section:not(.hero) {
   opacity: .5;
 }
 
+.slick-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .slick-dots li:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -792,8 +814,12 @@ section:not(.hero) {
   border-radius: 50%;
 }
 
+.slick-dots li::marker {
+  color: transparent;
+}
+
 .slick-dots li.slick-active {
-background: #989898;
+  background: #989898;
 }
 
 .slick-dots li button {
@@ -840,15 +866,20 @@ background: #989898;
 }
 
 .msg__block {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: fixed;
   right: 20px;
   bottom: 50px;
+  cursor: pointer;
+  z-index: 9999;
 }
 
+
+
 .form__body {
-  max-width: 300px;
+  max-width: 450px;
+  width: calc(100% - 20px);
   padding: 10px;
   position: fixed;
   bottom: 90px;
@@ -858,18 +889,34 @@ background: #989898;
   border-radius: 10px;
   border: 1px solid;
   transition: all .3s ease-in-out;
+  z-index: 999;
 }
 
 .form__body.active {
   transform: translateX(-50%) scale(1);
 }
 
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .form__btn {
   display: block;
+  max-width: 100px;
+  width: 100%;
+  background: #7a9015;
+  padding: 10px 15px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
 }
 
 .form__input {
-  border: 2px solid #1a1a1a;
+  border: 2px solid #1c1a1a;
   border-radius: 10px;
   padding: 10px;
   outline: none;
@@ -880,14 +927,20 @@ background: #989898;
 }
 
 .msg-open, .msg-close {
-  transition: all .3 ease-in-out;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
 }
 
 .msg-close.active {
+  opacity: 1;
   transform: rotate(90deg);
 }
 
 .msg-open {
+  opacity: 1;
   transform: scale(0);
 }
 

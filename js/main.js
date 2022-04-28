@@ -5,7 +5,8 @@ const sliderImage = document.querySelectorAll(".use__slider-image"),
 	msgBlock = document.querySelector(".msg__block"),
 	msgClose = document.querySelector(".msg-close"),
 	msgOpen = document.querySelector(".msg-open"),
-	formBody = document.querySelector(".form__body");
+	formBody = document.querySelector(".form__body"),
+	mask = document.querySelector(".mask");
 let slideIndex = 1
 let timer = setInterval(() => { plusSlides(1) }, 5500)
 showSlides(slideIndex);
@@ -54,7 +55,14 @@ $(document).ready(function () {
 });
 
 msgBlock.addEventListener("click", function () {
-	// msgClose.classList.toggle("active")
-	// msgOpen.classList.toggle("active")
+	msgClose.classList.toggle("active")
+	msgOpen.classList.toggle("active")
 	formBody.classList.toggle("active")
+	mask.classList.toggle("active")
+	if(document.body.style.overflow === "hidden") {
+		document.body.style.overflow = "scroll"
+	}else {
+		document.body.style.overflow = "hidden"
+	}
+
 })
