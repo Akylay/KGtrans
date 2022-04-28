@@ -157,6 +157,9 @@ section:not(.hero) {
   background: #d2dfbc;
 }
 
+.header__logo{
+  cursor: pointer;
+}
 .header__link {
   font-weight: 500;
   font-size: 17px;
@@ -188,7 +191,7 @@ section:not(.hero) {
 /* Header section */
 /* Hero section */
 .hero {
-  height: calc(100vh - 70px);
+  height: 100vh;
   background: url("../images/hero.jpg") no-repeat center/cover;
   padding: 200px 0 0 30px;
 }
@@ -239,7 +242,7 @@ section:not(.hero) {
 }
 
 .hero__gradient {
-  height: calc(100vh - 70px);
+  height: 100vh;
   position: relative;
 }
 
@@ -658,6 +661,7 @@ section:not(.hero) {
   top: -50px;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .footer__contacts {
@@ -773,9 +777,21 @@ section:not(.hero) {
 .tarrif__slider {
   box-shadow: 0 0 10px #000;
   border-radius: 10px;
-  min-width: 300px;
-  padding: 10px 15px;
+  min-width: 260px;
+  padding: 20px 15px;
   margin: 10px;
+  transition: 0.6s;
+  background: #e3e7cf
+}
+
+.tarrif__slider:hover{
+  background: #aabd57;
+}
+
+.tarrif__slider:hover .tarrif__btn{
+  background: #edf2d8;
+  color: #2d3603;
+  box-shadow: 0 0 10px #000;
 }
 
 .slick-arrow {
@@ -827,7 +843,7 @@ section:not(.hero) {
 }
 
 .tarrif__slider-title {
-  font-size: 60px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -835,15 +851,30 @@ section:not(.hero) {
   margin-bottom: 30px;
 }
 
+.tarif__slider-accum{
+  display: flex;
+  align-items: center;
+}
+.tarif__slider-accum img{
+  width: 24px;
+  height: 25px;
+
+}
+.tarif__price{
+  font-size: 30px;
+  color: #394504;
+  margin-top: 10px;
+}
 .tarrif__btn {
-  background: #1a89b4;
+  background: #9bc50c;
   color: #fff;
   border-radius: 8px;
   display: block;
-  max-width: 150px;
-  width: 100%;
+ /* max-width: 150px;
+  width: 100%;*/
   padding: 15px 25px;
   margin-top: 40px;
+  text-align: center;
 }
 
 /* tarrif */
@@ -869,7 +900,7 @@ section:not(.hero) {
   width: 30px;
   height: 30px;
   position: fixed;
-  right: 20px;
+  right: 50px;
   bottom: 50px;
   cursor: pointer;
   z-index: 9999;
@@ -883,7 +914,7 @@ section:not(.hero) {
   padding: 10px;
   position: fixed;
   bottom: 90px;
-  left: 50%;
+  right: -10%;
   transform: translateX(-50%) scale(0);
   background: #fff;
   border-radius: 10px;
