@@ -1,9 +1,13 @@
 
 const sliderImage = document.querySelectorAll(".use__slider-image"),
 	sliderInfo = document.querySelectorAll(".use__info"),
-	slidesStep = document.querySelectorAll(".use__slider-dot");
+	slidesStep = document.querySelectorAll(".use__slider-dot"),
+	msgBlock = document.querySelector(".msg__block"),
+	msgClose = document.querySelector(".msg-close"),
+	msgOpen = document.querySelector(".msg-open"),
+	formBody = document.querySelector(".form__body");
 let slideIndex = 1
-let timer = setInterval(()=>{plusSlides(1)},1500)
+let timer = setInterval(() => { plusSlides(1) }, 5500)
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -38,19 +42,19 @@ function showSlides(n) {
 	sliderInfo[slideIndex - 1].classList.add("active");
 }
 
+$(document).ready(function () {
+	$(".tarrif__slider-block").slick({
+		slidesToShow: 1,
+		centerMode: true,
+		dots: true,
+		variableWidth: true,
+		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>'
+	});
+});
 
-
-
-//
-// const openPopUp = document.getElementById("open_pop_up");
-// const closePopUp = document.getElementById("close_pop_up");
-// const popUp = document.getElementById("pop_up");
-//
-// openPopUp.addEventListener("click", function (e){
-// 	e.preventDefault();
-// 	popUp.classList.add("ask");
-// })
-//
-// closePopUp.addEventListener("click", () => {
-// 	popUp.classList.remove("ask");
-// })
+msgBlock.addEventListener("click", function () {
+	// msgClose.classList.toggle("active")
+	// msgOpen.classList.toggle("active")
+	formBody.classList.toggle("active")
+})
